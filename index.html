@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFT preview card component</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: "Outfit", sans-serif;
+      background-color: hsl(217, 54%, 11%);
+    }
+    .container {
+      background-color: hsl(216, 50%, 16%);
+      width: 234px;
+      height: 400px;
+      border-radius: 10px;
+    }
+    .image-equilibrium {
+      width: 200px;
+      border-radius: 10px;
+      margin-top: 16px;
+      margin-left: 16px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .overlay {
+      position: absolute;
+      background-color: hsla(178, 100%, 50%, 0.541);
+      width: 200px;
+      border-radius: 10px;
+      margin-left: 16px;
+      margin-bottom: 10px;
+      margin-top: -214px;
+      height: 200px;
+      opacity: 0;
+      transition: 0.5s ease;
+      cursor: pointer;
+    }
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+    .icon-view {
+      width: 40px;
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      text-align: center;
+    }
+    .heading {
+      margin-left: 16px;
+      margin-bottom: 10px;
+      color: hsl(0, 0%, 100%);
+      font-weight: 400;
+    }
+    .heading:hover {
+      cursor: pointer;
+      color: hsl(178, 100%, 50%, 0.7);
+    }
+    .text {
+      font-size: 12px;
+      margin-bottom: 10px;
+      margin-left: 16px;
+      color: hsl(215, 51%, 70%, 0.6);
+      line-height: 18px;
+    }
+    .eth {
+      margin-left: 16px;
+      display: flex;
+      place-items: center;
+      margin-bottom: 16px;
+    }
+    .icon-ethereum {
+      height: 16px;
+    }
+    .eth-amount {
+      color: hsl(178, 100%, 50%, 0.7);
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+    .icon-clock {
+      margin-left: 55px;
+    }
+    .days-left {
+      font-size: 12px;
+      margin-left: 5px;
+      color: hsl(215, 51%, 70%, 0.8);
+    }
+    hr {
+      width: 200px;
+      margin-left: 16px;
+      height: 1px;
+      background-color: hsl(215, 32%, 27%);
+      border: none;
+    }
+
+    .creator {
+      display: flex;
+      place-items: center;
+      margin-top: 14px;
+      margin-left: 16px;
+    }
+    .image-avatar {
+      width: 24px;
+      border: 1px solid hsl(0, 0%, 100%);
+      border-radius: 50%;
+    }
+    .creator-text {
+      font-size: 12px;
+      color: hsl(215, 51%, 70%, 0.6);
+      margin-left: 10px;
+    }
+    .creator-name {
+      color: hsl(0, 0%, 100%, 0.7);
+      font-weight: 400;
+    }
+    .creator-name:hover {
+      cursor: pointer;
+      color: hsl(178, 100%, 50%, 0.7);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img
+          src="image-equilibrium.jpg"
+          alt="image-equilibrium"
+          class="image-equilibrium"
+        />
+        <div class="overlay">
+          <img src="icon-view.svg" alt="icon-view" class="icon-view" />
+        </div>
+      </div>
+      <p class="heading">Equilibrium #3429</p>
+      <p class="text">
+        Our Equilibrium collection promotes <br />balance and calm.
+      </p>
+      <div class="eth">
+        <img
+          src="icon-ethereum.svg"
+          alt="icon-ethereum"
+          class="icon-ethereum"
+        />
+        <span class="eth-amount">0.041 ETH</span>
+        <img src="icon-clock.svg" alt="icon-clock" class="icon-clock" />
+        <span class="days-left">3 days left</span>
+      </div>
+      <hr />
+      <div class="creator">
+        <img src="image-avatar.png" alt="image-avatar" class="image-avatar" />
+        <p class="creator-text">
+          Creation of <span class="creator-name">Jules Wyvern</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
